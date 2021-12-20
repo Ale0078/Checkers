@@ -1,0 +1,96 @@
+﻿<mah:MetroWindow x:Class="Checkers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:tile="clr-namespace:TileView;assembly=TileView"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="450"
+        Width="800">
+
+    <tile:TileView Orientation="Horizontal">
+        <tile:TileGroup>
+            <tile:TileGroup.GroupName>
+                <TextBlock Text="Menu"
+                           FontSize="28"
+                           Foreground="White"
+                           FontWeight="Bold"/>
+            </tile:TileGroup.GroupName>
+            <tile:TileGroup.Tiles>
+                <tile:TileGrid>
+                    <tile:TileGrid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </tile:TileGrid.RowDefinitions>
+                    <tile:TileGrid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </tile:TileGrid.ColumnDefinitions>
+                    <tile:Tile Grid.Column="0"
+                               Grid.Row="0"
+                               Source="/View/BoardView.xaml"
+                               Text="Start game"/>
+                    <tile:Tile Grid.Column="1" 
+                               Grid.Row="1"
+                               Source="/View/WinnerView.xaml"
+                               Text="Fast win"/>
+                </tile:TileGrid>
+            </tile:TileGroup.Tiles>
+        </tile:TileGroup>
+        <tile:TileGroup>
+            <tile:TileGroup.GroupName>
+                <TextBlock Text="Just to be"
+                           FontSize="28"
+                           Foreground="White"
+                           FontWeight="Bold"/>
+            </tile:TileGroup.GroupName>
+            <tile:TileGroup.Tiles>
+                <tile:TileGrid>
+                    <tile:TileGrid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </tile:TileGrid.RowDefinitions>
+                    <tile:TileGrid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </tile:TileGrid.ColumnDefinitions>
+                    <tile:Tile Grid.Column="0"
+                               Grid.Row="0"
+                               Source="/View/BoardView.xaml"
+                               Text="1"/>
+                    <tile:Tile Grid.Column="1"
+                               Grid.Row="0"
+                               Source="/View/BoardView.xaml"
+                               Text="2"/>
+                    <tile:Tile Grid.Column="2"
+                               Grid.Row="0"
+                               Source="/View/BoardView.xaml"
+                               Text="3"/>
+                    <tile:Tile Grid.Column="1"
+                               Grid.Row="1"
+                               Source="/View/BoardView.xaml"
+                               Text="4"/>
+                    <tile:Tile Grid.Column="3"
+                               Grid.Row="1"
+                               Source="/View/BoardView.xaml"
+                               Text="5"/>
+                    <tile:Tile Grid.Column="0"
+                               Grid.Row="3"
+                               Source="/View/BoardView.xaml"
+                               Text="6"/>
+                    <tile:Tile Grid.Column="2"
+                               Grid.Row="2"
+                               Source="/View/BoardView.xaml"
+                               Text="7"/>
+                </tile:TileGrid>
+            </tile:TileGroup.Tiles>
+        </tile:TileGroup>
+    </tile:TileView>
+</mah:MetroWindow>
+
